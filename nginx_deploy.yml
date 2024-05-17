@@ -1,0 +1,23 @@
+- name: Install Nginx
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Update apt package cache
+    apt:
+     update_cache: yes
+
+  - name: Install Nginx
+    apt:
+     name: nginx
+     state: present
+
+  - name: Start Nginx
+    service:
+     name: nginx
+     state: started
+
+  - name: Deploy website
+    copy:
+     src: index.html
+     dest: /var/www/html
