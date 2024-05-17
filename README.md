@@ -10,7 +10,7 @@ On this repository we have basic configuration to deploy a basic nginx server on
 - Servers and hosts updated
 - Have installed ansible on our host machine
 
-## How to deploy de service
+## How to deploy the service
 - Step 1: Change hosts configurations using on servers your own IP and change SSH user and password configuration.
 - Step 2: Run playbook by the following command ansible-playbook yml_file -i ansible_hosts_file.
 - Step 3: Try to connect to the servers IP on navigator or with curl command by using the host machine.
